@@ -50,7 +50,7 @@ exports.update = async (req,res) => {
             where: {id}
         })
         res.json({
-            message: "success",
+            message: "data berubah ,kaya power rangers",
             data: quiz,
         });
     } catch (error){
