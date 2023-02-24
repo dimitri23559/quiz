@@ -1,7 +1,7 @@
 //penggunaan model
 
 const db = require("../models");
-const Materi = db.materis;
+const Materi = db.materi;
 
 //menambahkan data quiz
 
@@ -30,7 +30,7 @@ exports.getAll = async(req,res) => {
         const materis = await Materi.findAll()
         res.json({
             message: "success",
-            data: quizzes
+            data: materis
         });
         //jika error
     }catch (error){
@@ -46,7 +46,7 @@ exports.update = async (req,res) => {
     const id = req.params.id;
     try {
         const materi = await Materi.findByPk(id, { rejectOnEmpty: true })
-        quiz.update(req.body,{
+        materi.update(req.body,{
             where: {id}
         })
         res.json({

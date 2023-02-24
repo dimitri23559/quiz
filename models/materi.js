@@ -1,15 +1,12 @@
 module.exports = (sequelize, Sequelize) => {
     const Materi = sequelize.define('materi', {
-        tittle: {
+        title: {
             type: Sequelize.STRING,
         },
         body: {
             type: Sequelize.STRING,
-        },body:
-         {
-            type: Sequelize.STRING,
         },
-        catgoryid: {
+        categoryId: {
             type: Sequelize.STRING,
         },
         levelId: {

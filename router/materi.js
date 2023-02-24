@@ -1,4 +1,4 @@
-const quizController = require('../controllers/materi');
+const materiController = require('../controllers/materi');
 const router = require('express').Router();
 
 router.post('/', materiController.create);

@@ -4,6 +4,7 @@ const app = express();
 const port = 5000;
 const quizRoute = require('./router/quiz');
 const jobsheetRoute = require('./router/jobsheet');
+const materiRoute = require('./router/materi');
 
 
 app.use(cors())
@@ -19,6 +20,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/quizzes',quizRoute)
 app.use('/api/jobsheet',jobsheetRoute)
+app.use('/api/materis',materiRoute)
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
